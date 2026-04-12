@@ -1,0 +1,126 @@
+# IAM-Ma-Integration-Lab — .gitignore
+
+# ============================================================
+# FICHIERS SENSIBLES — NE JAMAIS VERSIONNER
+# ============================================================
+
+# Credentials et secrets
+.env
+*.env
+*.secret
+*credentials*.csv
+phase3-migration-credentials_*.csv
+phase3-migration-credentials_*.json
+
+# App Registration secrets
+client_secret*.txt
+graph_secret*.txt
+
+# Clés privées et certificats
+*.pfx
+*.p12
+*.key
+*.pem
+
+# ============================================================
+# RAPPORTS D'EXÉCUTION (générés — non versionnés)
+# ============================================================
+
+# Rapports produits par les scripts
+reports/
+!reports/.gitkeep
+
+# CSV de validation complétés (données nominatives)
+*_TOVALIDATE_*.csv
+*_VALIDATED_*.csv
+MAPPING-IDENTITY_TOVALIDATE_*.csv
+
+# Evidence (scellage)
+reports/evidence/
+
+# Fichiers rollback (données avant modification)
+*-rollback_*.csv
+
+# Logs d'exécution
+*-execution_*.csv
+*-log_*.csv
+seed-log.csv
+
+# ============================================================
+# ENVIRONNEMENT PYTHON
+# ============================================================
+
+# Virtualenv
+.venv/
+venv/
+env/
+ENV/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# ============================================================
+# ENVIRONNEMENT POWERSHELL
+# ============================================================
+
+# Modules locaux
+Modules/
+
+# ============================================================
+# SYSTÈME ET ÉDITEURS
+# ============================================================
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# JetBrains
+.idea/
+*.iml
+
+# Vim
+*.swp
+*.swo
+
+# ============================================================
+# FICHIERS TEMPORAIRES
+# ============================================================
+
+# Temp
+*.tmp
+*.temp
+*.bak
+
+# Archives
+*.zip
+*.tar.gz
+*.7z
+
+# ============================================================
+# CONSERVER CES DOSSIERS VIDES (via .gitkeep)
+# ============================================================
+
+# Le dossier reports/ doit exister mais être vide
+# Ajouter manuellement : touch reports/.gitkeep
